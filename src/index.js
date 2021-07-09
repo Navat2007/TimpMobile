@@ -18,6 +18,11 @@ const startApp = () => {
 }
 
 if(window.cordova)
-    document.addEventListener('deviceready', startApp, false);
+{
+    document.addEventListener('deviceready', () => {
+        console.log('Running cordova-' + window.cordova.platformId + '@' + window.cordova.version);
+        startApp();
+    }, false);
+}
 else
     startApp();

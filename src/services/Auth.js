@@ -6,10 +6,13 @@ class Auth {
 
     }
 
-    login(cb) {
+    login(data, cb) {
 
-        this.authenticated = true;
-        cb();
+        if(data.login == "admin" && data.password == "admin")
+        {
+            this.authenticated = true;
+            cb();
+        }
 
     }
 

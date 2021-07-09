@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Index = () => {
+const IndexPage = (props) => {
     return (
         <div>
             <h1>Index landing</h1>
             <button onClick={() => {
-                this.props.history.push("/login");
+                props.history.push("/login");
             }}>Login</button>
         </div>
     )
 }
 
-export default Index;
+export default IndexPage;
