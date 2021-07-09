@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="936d5a54-a5ac-4a38-b709-3fa7baa5de12" name="Default Changelist" comment="" />
+    <list default="true" id="936d5a54-a5ac-4a38-b709-3fa7baa5de12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +20,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/reactproject" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1v47GvGks9NS0QEvjbyVhrCCZ5n" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -27,8 +29,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="15.0.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="15.0.1" />
@@ -53,7 +57,7 @@
       <workItem from="1625809416464" duration="662000" />
       <workItem from="1625810372060" duration="880000" />
       <workItem from="1625811306843" duration="553000" />
-      <workItem from="1625812253173" duration="12566000" />
+      <workItem from="1625812253173" duration="14045000" />
     </task>
     <servers />
   </component>
