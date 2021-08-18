@@ -4,5 +4,5 @@ module.exports = [
     './gulp/tasks/watch',
     // './gulp/tasks/script',
     './gulp/tasks/img',
-    './gulp/tasks/mail',
+    // './gulp/tasks/mail',
 ];

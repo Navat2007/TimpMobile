@@ -1,31 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="936d5a54-a5ac-4a38-b709-3fa7baa5de12" name="Default Changelist" comment="git ignore">
-      <change afterPath="$PROJECT_DIR$/gulp/config/tasks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gulp/tasks/img.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gulp/tasks/mail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gulp/tasks/sass.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gulp/tasks/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gulp/tasks/serve.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gulp/tasks/watch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/TimpMobile/_assets/_colors.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/TimpMobile/_assets/_headlings.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/TimpMobile/_assets/_mixin.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/TimpMobile/main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/_base/animation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/_base/functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/_base/mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/_base/preloader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/_base/reset.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/TimpMobile/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/TimpMobile/head.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/TimpMobile/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/TimpMobile/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="936d5a54-a5ac-4a38-b709-3fa7baa5de12" name="Default Changelist" comment="option and base paket">
+      <change afterPath="$PROJECT_DIR$/scss/TimpMobile/parts/button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scss/TimpMobile/parts/field.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scss/TimpMobile/parts/login.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scss/TimpMobile/parts/popup.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_alert-fill.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_alert.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-dd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-fill-dd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-fill-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-fill-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-location.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-round-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-round-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-thin-dd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-thin-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_arrow-thin-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_attach.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_document.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_email.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_eye.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_facebook.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_fb-fill.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_inn-fill.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_insta-fill.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_insta.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_location.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_minus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_moymir.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_ok.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_skype.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_tiktok.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_tme.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_tw-fill.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_twitter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_viber.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_vk-fill.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_vk.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_whatsapp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/icons_youtube.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-img/icon/stack/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/TimpMobile/css/styles.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/TimpMobile/img/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/TimpMobile/img/img-bg_login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/TimpMobile/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/config/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulp/config/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/tasks/img.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulp/tasks/img.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/tasks/sass.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulp/tasks/sass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/tasks/watch.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulp/tasks/watch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/_assets/_headlings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/TimpMobile/_assets/_headlings.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/_assets/_mixin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/TimpMobile/_assets/_mixin.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/TimpMobile/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_base/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_base/mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/TimpMobile/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/TimpMobile/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +104,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.16.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.9" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/scss/TimpMobile" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/template/TimpMobile/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -74,11 +113,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\XAMPP\htdocs\TimpMobile\template\TimpMobile\img" />
+      <recent name="F:\XAMPP\htdocs\TimpMobile\src-img\icon" />
+      <recent name="F:\XAMPP\htdocs\TimpMobile\scss\TimpMobile\parts" />
       <recent name="F:\XAMPP\htdocs\TimpMobile\scss\TimpMobile" />
       <recent name="F:\XAMPP\htdocs\TimpMobile\scss" />
-      <recent name="F:\XAMPP\htdocs\TimpMobile\template\TimpMobile" />
-      <recent name="F:\XAMPP\htdocs\TimpMobile" />
-      <recent name="E:\Projects\Web Projects\TimpMobile\src\pages\Main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projects\Web Projects\TimpMobile\src\pages\Main" />
@@ -88,7 +127,38 @@
       <recent name="E:\Projects\Web Projects\TimpMobile" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.emulate">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="default" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>default</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="img:svg-sprite" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>img:svg-sprite</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -109,6 +179,12 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gulp.js.img:svg-sprite" />
+        <item itemvalue="Gulp.js.default" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -127,7 +203,7 @@
       <workItem from="1626685480145" duration="27274000" />
       <workItem from="1626885455787" duration="3090000" />
       <workItem from="1628714505328" duration="29639000" />
-      <workItem from="1629274973344" duration="2413000" />
+      <workItem from="1629274973344" duration="13759000" />
     </task>
     <task id="LOCAL-00001" summary="qq">
       <created>1625828556548</created>
@@ -157,7 +233,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629275789793</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="option and base paket">
+      <created>1629277472067</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629277472067</updated>
+    </task>
+    <task id="LOCAL-00006" summary="option and base paket">
+      <created>1629277641309</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629277641309</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +272,7 @@
     <MESSAGE value="qq" />
     <MESSAGE value="init" />
     <MESSAGE value="git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="git ignore" />
+    <MESSAGE value="option and base paket" />
+    <option name="LAST_COMMIT_MESSAGE" value="option and base paket" />
   </component>
 </project>

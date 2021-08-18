@@ -13,13 +13,7 @@
 // Перенос переменных в CSS
 :root {
   @each $name, $color in $colors {
-    @if type-of($color) == "map" {
-      @each $subname, $subcolor in $color {
-        --color-#{$name}-#{$subname}: #{$subcolor};
-      }
-    } @else {
-      --color-#{$name}: #{$color};
-    }
+    --color-#{"" + $name}: #{$color};
   }
 
   /*---------------------------FONTS*/
@@ -29,6 +23,8 @@
 
   --mainWidth: 100%;
   --padding-side: 2.5vmax;
+  --inputPad: .875rem;
+  --inputPad-top: .5rem;
 
   @media screen and (min-width: 64em) {
     --padding-side: 3.125em;
@@ -46,12 +42,7 @@
 //		Blocks
 //*********************************************
 
-.--text-align-center {
-  text-align: center;
-}
-
-.--priF {
-  color: color(priF, null, false);
-}
-
-//@import "parts/container";
+@import "parts/field";
+@import "parts/button";
+@import "parts/popup";
+@import "parts/login";

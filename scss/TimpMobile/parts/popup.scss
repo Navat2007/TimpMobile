@@ -1,0 +1,205 @@
+// УНИВЕРСАЛЬНОЕ ПОПАП
+.a-popup {
+  @include backCard();
+  z-index: 999;
+  overflow-y: auto;
+
+  &__card {
+    @include st-card();
+    z-index: 1000;
+    margin: auto;
+    max-width: 100%;
+    animation: PopupShow 0.6s ease-in-out;
+    animation-delay: .05s;
+    position: relative;
+  }
+
+  // ЗАКРЫТЬ
+  &__close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    display: block;
+    @include box(1.75em);
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+
+    &:hover:before,
+    &:hover:after { opacity: 1; }
+
+    &:active { transform: translateY(1px); }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: block;
+      width: 3px;
+      height: inherit;
+      background-color: color(priF, null, false);
+      opacity: .75;
+      transition: opacity .25s ease-in-out;
+    }
+
+    &:before { transform: rotate(-45deg); }
+
+    &:after { transform: rotate(45deg); }
+  }
+}
+
+.a-notific {
+  @include backCard();
+  z-index: 1001;
+
+  &__card {
+    @include st-card();
+    padding: 2em 1em;
+    text-align: center;
+    border-radius: 2px;
+    animation: notificShow 0.3s ease-out;
+    @include media(sm) {
+      width: 23em;
+    }
+
+    &.--alert {
+      & .a-notific__icon {
+        border-color: color(alert, null, false);
+
+        p {
+          color: color(alert, null, false);
+        }
+      }
+    }
+
+    &.--error {
+      & .a-notific__icon {
+        border-color: color(error, null, false);
+
+        p {
+          color: color(error, null, false);
+        }
+      }
+    }
+
+    &.--success {
+      & .a-notific__icon {
+        border-color: color(success, null, false);
+
+        p {
+          color: color(success, null, false);
+        }
+      }
+    }
+
+    &.--info {
+      & .a-notific__icon {
+        border-color: color(info, null, false);
+
+        p {
+          color: color(info, null, false);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    margin-bottom: 1em;
+    @include box(4.5em);
+    border: 4px solid transparent;
+    border-radius: 50%;
+    display: inline-flex;
+    pointer-events: none;
+    transform: translate3d(0, -10%, 0) scale(1, 0);
+    animation: notificInfo 0.2s 0.15s ease-out both;
+
+    p {
+      margin: auto;
+      line-height: 100%;
+      font-size: 285%;
+      font-weight: bold;
+      transform: translate3d(0, -10%, 0) scale(1, 0);
+      animation: notificInfo 0.2s 0.35s ease-out both;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    font-size: 125%;
+    font-weight: bold;
+    line-height: 150%;
+    color: color(dark, null, false);
+  }
+
+  &__text {
+    font-size: 87.5%;
+    line-height: 150%;
+    color: color(darkLow, null, false);
+  }
+
+  &__controls {
+    &:not(:empty) {
+      padding-top: 1.5rem;
+    }
+
+    & > button:not(:last-of-type) {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@include keyframes(PopupShow) {
+  0% {
+    opacity: 0;
+    //transform: translate3d(0, -8vmax, 0);
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    //transform: translate3d(0, 0, 0);
+    transform: scale(1);
+  }
+}
+
+@include keyframes(notificShow) {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0) scale(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@include keyframes(notificInfo) {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0) scale(1, 0);
+  }
+  80% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1.2, 1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}

@@ -3,6 +3,138 @@ include $_SERVER['DOCUMENT_ROOT'] . 'template/TimpMobile/head.php';
 include $_SERVER['DOCUMENT_ROOT'] . 'template/TimpMobile/header.php';
 ?>
 
+<!--REGISTRATION-->
+<!--<div class="a-popup m-login-bg">
+    <div class="a-popup__card">
+        <div class="m-login-form">
+            <div class="m-login-form__section">
+                <p class="m-login-form__title">Регистрация</p>
+                <div class="a-field">
+                    <div class="a-field__inner">
+                        <input class="a-field__input"
+                               name="email"
+                               type="email"
+                               autocomplete="email"
+                               placeholder="Введите email">
+                        <i class="a-field__icon"></i>
+                        <span class="a-field__info"></span>
+                    </div>
+                </div>
+                <div class="a-field">
+                    <div class="a-field__inner">
+                        <input class="a-field__input"
+                               name="password"
+                               type="password"
+                               autocomplete="new-password"
+                               placeholder="Придумайте пароль">
+                        <i class="a-field__icon"></i>
+                        <span class="a-field__info"></span>
+                    </div>
+                </div>
+                <div class="a-field">
+                    <div class="a-field__inner">
+                        <input class="a-field__input"
+                               name="password"
+                               type="password"
+                               autocomplete="new-password"
+                               placeholder="Повторите пароль">
+                        <i class="a-field__icon"></i>
+                        <span class="a-field__info"></span>
+                    </div>
+                </div>
+                <button class="m-login-form__btn" type="button">Регистрация</button>
+            </div>
+            <div class="m-login-form__social">
+                <p class="m-login-form__label">Регистрация с помощью:</p>
+                <a href="" class="m-social-icon-link --facebook"></a>
+                <a href="" class="m-social-icon-link --vk"></a>
+                <a href="" class="m-social-icon-link --telegram"></a>
+                <a href="" class="m-social-icon-link --viber"></a>
+                <a href="" class="m-social-icon-link --whatsapp"></a>
+            </div>
+            <div class="m-login-form__bottom">
+                <span>Уже есть аккаунт?</span>
+                <a class="m-link-btn" href="">Войти</a>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<!--LOGIN-->
+<!--<div class="a-popup m-login-bg">
+    <div class="a-popup__card">
+        <div class="m-login-form">
+            <div class="m-login-form__section">
+                <p class="m-login-form__title">Вход</p>
+                <div class="a-field">
+                    <div class="a-field__inner">
+                        <input class="a-field__input"
+                               name="email"
+                               type="email"
+                               autocomplete="email"
+                               placeholder="Введите email">
+                        <i class="a-field__icon"></i>
+                        <span class="a-field__info"></span>
+                    </div>
+                </div>
+                <div class="a-field">
+                    <div class="a-field__inner">
+                        <input class="a-field__input"
+                               name="password"
+                               type="password"
+                               autocomplete="password"
+                               placeholder="Введите пароль">
+                        <i class="a-field__icon"></i>
+                        <i class="a-field__eye-icon"></i>
+                        <span class="a-field__info"></span>
+                    </div>
+                </div>
+                <button class="m-login-form__btn" type="button">Войти</button>
+            </div>
+            <div class="m-login-form__social">
+                <p class="m-login-form__label">Регистрация с помощью:</p>
+                <a href="" class="m-social-icon-link --facebook"></a>
+                <a href="" class="m-social-icon-link --vk"></a>
+                <a href="" class="m-social-icon-link --telegram"></a>
+                <a href="" class="m-social-icon-link --viber"></a>
+                <a href="" class="m-social-icon-link --whatsapp"></a>
+            </div>
+            <div class="m-login-form__bottom">
+                <a href="">Забыли пароль?</a>
+                <a class="m-link-btn" href="">Регистрация</a>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<!--Forgot password-->
+<!--<div class="a-popup m-login-bg">
+    <div class="a-popup__card">
+        <div class="m-login-form">
+            <div class="m-login-form__section">
+                <p class="m-login-form__title">Восстановление пароля</p>
+                <div class="a-field">
+                    <div class="a-field__inner">
+                        <input class="a-field__input"
+                               name="email"
+                               type="email"
+                               autocomplete="email"
+                               placeholder="Введите email">
+                        <i class="a-field__icon"></i>
+                        <span class="a-field__info"></span>
+                    </div>
+                </div>
+                <button class="m-login-form__btn" type="button">Отправить</button>
+            </div>
+            <div class="m-login-form__bottom">
+                <a class="m-link-btn" href="">Вход</a>
+                <a class="m-link-btn" href="">Регистрация</a>
+            </div>
+        </div>
+    </div>
+</div>-->
 
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . 'template/TimpMobile/footer.php';

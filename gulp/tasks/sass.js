@@ -5,7 +5,7 @@ module.exports = function () {
             return $.gulp.src($.sass[i][2])
                     .pipe($.gp.concat($.sass[i][1] + '.scss'))
                     // .pipe($.gp.sourcemaps.init())
-                    .pipe($.gp.sass())
+                    .pipe($.gsass())
                     .on("error", $.gp.notify.onError({title: "style"}))
                     .pipe($.gp.postcss([$.autoprefixer()]))
                     .pipe($.cleanCSS())

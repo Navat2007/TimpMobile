@@ -11,6 +11,7 @@
   vertical-align: middle;
   position: relative;
   overflow: hidden;
+  font-family: inherit;
   transition: 0.25s ease-in-out;
   transition-property: background-color, color, border, opacity;
   cursor: pointer;
@@ -19,56 +20,60 @@
 // @include btnColors(priF); @include btnText(priF); @include btnOut(priF, dark);
 // Указываем название цвета кнопки, цвета шрифта (необяз), и % затемнения (необяз)
 @mixin btnColors($bgc, $color: white, $perDark: 0) {
-  color: color($color, null, false);
-  background-color: darken(color($bgc, null, true), $perDark);
+  &:not(:disabled) {
+    color: color($color, null, false);
+    background-color: darken(color($bgc, null, true), $perDark);
 
-  &:hover {
-    background-color: darken(color($bgc, null, true), 10% + $perDark);
-  }
-  &.--spinner-active > .spinner > div {
-    background-color: color($color, null, false)
+    &:hover {
+      background-color: darken(color($bgc, null, true), 10% + $perDark);
+    }
+
+    &.--spinner-active > .spinner > div {
+      background-color: color($color, null, false)
+    }
   }
 }
 
 @mixin btnText($color) {
-  background-color: transparent;
-  color: color($color, null, false);
-  &:hover {
-    background-color: rgba(color($color, null, true), 0.15);
-  }
-  &.--spinner-active > .spinner > div {
-    background-color: color($color, null, false)
+  &:not(:disabled) {
+    background-color: transparent;
+    color: color($color, null, false);
+
+    &:hover {
+      background-color: rgba(color($color, null, true), 0.15);
+    }
+
+    &.--spinner-active > .spinner > div {
+      background-color: color($color, null, false)
+    }
   }
 }
 
 @mixin btnOut($bgc, $color: dark) {
-  background-color: transparent;
-  color: color($color, null, false);
-  border-color: color($bgc, null, false);
+  &:not(:disabled) {
+    background-color: transparent;
+    color: color($color, null, false);
+    border-color: color($bgc, null, false);
 
-  &:hover {
-    background-color: rgba(color($bgc, null, true), .15);
-  }
+    &:hover {
+      background-color: rgba(color($bgc, null, true), .15);
+    }
 
-  &.--spinner-active > .spinner > div {
-    background-color: color($color, null, false)
+    &.--spinner-active > .spinner > div {
+      background-color: color($color, null, false)
+    }
   }
 }
 
 // --------- ТЕКСТОВЫЕ ПОЛЯ И ЧЕКБОКСЫ
-:root {
-  --inputPad: 1.125rem;
-  --inputPad-top: .875rem;
-}
-
 @mixin input {
   appearance: none;
   outline: none;
   width: 100%;
   background-color: color(white, null, false);
-  border: 1px solid color(g400, null, false);
+  border: 1px solid color(g200, null, false);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: .9375rem;
   border-radius: 4px;
   padding: var(--inputPad-top) var(--inputPad);
   transition: 0.2s ease-out;
@@ -231,15 +236,32 @@
 }
 
 
-// --------- ОСТАЛЬНЫЕ
+// --------- POPUP
+
+// Задник для POPUP без Zindex
+@mixin backCard() {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 1rem;
+  background-color: rgba(color(black, null, true), 0.54);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
 @mixin st-card($hover: true) {
   background-color: color(white, null, false);
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  box-shadow: 0 0 1px rgba(color(g700, null, true), 0.26),
+  0 0 15px rgba(color(g700, null, true), 0.15);
+
   @if ($hover) {
     transition: box-shadow .25s ease-in-out;
     &:hover {
-      box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.26);
+      box-shadow: 0 0 1px rgba(color(g700, null, true), 0.26),
+      2px 4px 15px rgba(color(g700, null, true), 0.26);
     }
   }
 }

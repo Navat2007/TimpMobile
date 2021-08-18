@@ -1,0 +1,109 @@
+.a-field {
+
+  // ошибка - JS
+  &.--error {
+    @include error(a-field);
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__label {
+    @include label();
+  }
+
+  &__input {
+    @include input;
+
+    /*&:focus,
+    &:not(:disabled):hover,
+    &:not(:focus):valid:not(:placeholder-shown) {
+      border-color: color(g300, null, false);
+    }*/
+
+    // Ошибка
+    &:not(:focus):invalid:not(:placeholder-shown) {
+      border-color: color(error, null, false);
+      padding-right: 2.75em;
+
+      & ~ .a-textfield__icon {
+        color: color(error, null, false);
+        animation: iconError 0.3s ease-in-out forwards;
+      }
+    }
+
+    &[type='number'], &[type='time'] {
+      //line-height: 100%;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        opacity: 1;
+        cursor: pointer;
+        //margin-top: -1px;
+        //margin-bottom: -2px;
+      }
+    }
+
+    &[type="date"]::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    &[type='file'] {
+      display: none;
+    }
+  }
+
+  &__select {
+    @include input;
+    cursor: pointer;
+    padding-right: calc(var(--inputPad) + 1.5em);
+
+    & ~ .a-field__icon {
+      transform: scale(1);
+
+      &:before { content: none; }
+
+      &:after {
+        content: '';
+        transform: scale(.65);
+        background-color: color(darkLow, null, false);
+        mask: url("../img/icons.svg#icons_arrow-fill-dd") no-repeat;
+      }
+    }
+
+    &:hover ~ .a-field__icon:after {
+      background-color: color(dark, null, false)
+    }
+  }
+
+  &__textarea {
+    @include input;
+    height: auto;
+    resize: none;
+  }
+
+  // спан с ошибкой или информацией
+  &__info {
+    @include info();
+  }
+
+  // Иконка для ошибки
+  &__icon {
+    @include icon-pos();
+    transform: scale(0);
+
+    &:before,
+    &:after {
+      @include box(1.5em);
+      display: inline-block;
+    }
+
+    &:before {
+      content: '';
+      mask: url("../img/icons.svg#icons_alert-fill") no-repeat;
+      background-color: color(priF, null, false);
+    }
+  }
+}

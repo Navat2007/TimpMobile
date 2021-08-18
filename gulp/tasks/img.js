@@ -225,38 +225,20 @@ module.exports = function () {
 
     $.gulp.task('img:svg-sprite', function (done) {
         let imgFolder = [
-            // 'img/svg/icon/icon-controls-v2/',
-            // 'img/svg/icon/admin-menu/',
-            // 'img/svg/icon/icon-sport-192/',
-            // 'img/svg/icon/icon-sport-v2/',
-            // 'img/svg/icon/mossport-icons/',
-            // 'img/svg/icon/mossport-program-icons/',
-            'img/svg/icon/cst/',
+            'src-img/icon/',
         ];
         let imgSrc = [
-            // 'img/svg/icon/icon-controls-v2/*.svg',
-            // 'img/svg/icon/admin-menu/*.svg',
-            // 'img/svg/icon/icon-sport-192/*.svg',
-            // 'img/svg/icon/icon-sport-v2/*.svg',
-            // 'img/svg/icon/mossport-icons/*.svg',
-            // 'img/svg/icon/mossport-program-icons/*.svg',
-            'img/svg/icon/cst/*.svg',
+            'src-img/icon/*.svg',
         ];
 
         let name = [
-            // 'mossport-icons.svg',
             'icons.svg',
-            // 'mossport-program-icons.svg',
         ]
 
         imgFolder.forEach(function (item, i, array) {
             $.gulp.src(imgSrc[i])
                 .pipe($.svgSprite({
                     mode: {
-                        /*view: {
-                            bust: false,
-                            render: {scss: true},
-                        },*/
                         stack: {
                             sprite: name[i]
                         }
