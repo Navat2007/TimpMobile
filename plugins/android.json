@@ -1,0 +1,22 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-background-fetch": {
+      "PACKAGE_NAME": "ru.navat.timp"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "ru.navat.timp"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "ru.navat.timp"
+    }
+  },
+  "dependent_plugins": {}
+}
