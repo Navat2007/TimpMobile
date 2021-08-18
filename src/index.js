@@ -1,19 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import {BrowserRouter} from "react-router-dom";
+import axios from "axios";
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+const baseConfig = () => {
+
+    window.global = {
+        baseUrl: "62.113.118.96:9988",
+    }
+
+    axios.defaults.baseURL = 'http://' + window.global.baseUrl + '/';
+
+}
 
 const startApp = () => {
 
+    baseConfig();
+
     ReactDOM.render(
-        <React.StrictMode>
+        <BrowserRouter>
             <App />
-        </React.StrictMode>,
+        </BrowserRouter>,
         document.getElementById('root')
     );
 
-    reportWebVitals();
+}
+
+const startMobileApp = () => {
+
+    baseConfig();
 
 }
 
@@ -21,7 +38,7 @@ if(window.cordova)
 {
     document.addEventListener('deviceready', () => {
         console.log('Running cordova-' + window.cordova.platformId + '@' + window.cordova.version);
-        startApp();
+        startMobileApp();
     }, false);
 }
 else
