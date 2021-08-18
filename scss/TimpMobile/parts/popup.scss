@@ -55,96 +55,89 @@
 
   &__card {
     @include st-card();
-    padding: 2em 1em;
-    text-align: center;
-    border-radius: 2px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
     animation: notificShow 0.3s ease-out;
-    @include media(sm) {
-      width: 23em;
+    @include media(xs) {
+      width: 20em;
     }
 
-    &.--alert {
-      & .a-notific__icon {
-        border-color: color(alert, null, false);
-
-        p {
-          color: color(alert, null, false);
-        }
-      }
+    &.--alert .a-notific__icon {
+      background-color: color(alert, null, false);
     }
 
-    &.--error {
-      & .a-notific__icon {
-        border-color: color(error, null, false);
-
-        p {
-          color: color(error, null, false);
-        }
-      }
+    &.--error .a-notific__icon {
+      background-color: color(error, null, false);
     }
 
-    &.--success {
-      & .a-notific__icon {
-        border-color: color(success, null, false);
-
-        p {
-          color: color(success, null, false);
-        }
-      }
+    &.--success .a-notific__icon {
+      background-color: color(success, null, false);
     }
 
-    &.--info {
-      & .a-notific__icon {
-        border-color: color(info, null, false);
-
-        p {
-          color: color(info, null, false);
-        }
-      }
+    &.--info .a-notific__icon {
+      background-color: color(info, null, false);
     }
   }
 
   &__icon {
-    margin-bottom: 1em;
-    @include box(4.5em);
-    border: 4px solid transparent;
-    border-radius: 50%;
+    padding: 1.25em;
+    grid-row: span 3;
+    text-align: center;
+
     display: inline-flex;
     pointer-events: none;
-    transform: translate3d(0, -10%, 0) scale(1, 0);
-    animation: notificInfo 0.2s 0.15s ease-out both;
+    //transform: translate3d(0, -10%, 0) scale(1, 0);
+    //animation: notificInfo 0.2s 0.15s ease-out both;
 
     p {
+      flex: none;
       margin: auto;
-      line-height: 100%;
-      font-size: 285%;
+
+      @include box(3rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid color(white, null, false);
+      border-radius: 50%;
+
+      font-size: 180%;
       font-weight: bold;
+      color: color(white, null, false);
+
       transform: translate3d(0, -10%, 0) scale(1, 0);
       animation: notificInfo 0.2s 0.35s ease-out both;
     }
   }
 
   &__title {
-    margin-bottom: 0.5rem;
-    font-size: 125%;
-    font-weight: bold;
-    line-height: 150%;
-    color: color(dark, null, false);
-  }
+    align-self: center;
+    margin: .875rem 1.25rem;
+    @extend .a-h3;
 
-  &__text {
-    font-size: 87.5%;
-    line-height: 150%;
-    color: color(darkLow, null, false);
-  }
-
-  &__controls {
-    &:not(:empty) {
-      padding-top: 1.5rem;
+    &:last-of-type {
+      grid-row: span 3;
     }
+  }
 
-    & > button:not(:last-of-type) {
-      margin-right: 0.5rem;
+  &__text:not(:empty) {
+    grid-area: 2/2/3/3;
+    margin: 0 1.25rem .875rem;
+    font-size: 87.5%;
+  }
+
+  &__controls:not(:empty) {
+    grid-area: 3/2/4/3;
+
+    padding: .875rem 1.25rem;
+    border-top: 1px solid color(g300, null, false);
+
+    & > button {
+      width: auto;
+
+      &:not(:last-of-type) {
+        margin-right: 0.5rem;
+      }
     }
   }
 }

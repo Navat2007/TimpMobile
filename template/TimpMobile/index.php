@@ -110,7 +110,7 @@ include $_SERVER['DOCUMENT_ROOT'] . 'template/TimpMobile/header.php';
 
 
 <!--Forgot password-->
-<!--<div class="a-popup m-login-bg">
+<div class="a-popup m-login-bg">
     <div class="a-popup__card">
         <div class="m-login-form">
             <div class="m-login-form__section">
@@ -134,7 +134,19 @@ include $_SERVER['DOCUMENT_ROOT'] . 'template/TimpMobile/header.php';
             </div>
         </div>
     </div>
-</div>-->
+</div>
+
+
+<!--NOTIFIC-->
+<div class="a-notific">
+    <div class="a-notific__card --success">
+        <div class="a-notific__icon"><p>✓</p></div>
+        <p class="a-notific__title">Успех</p>
+        <p class="a-notific__text">Письмо успешно отправлено.</p>
+        <div class="a-notific__controls"></div>
+    </div>
+</div>
+
 
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . 'template/TimpMobile/footer.php';
