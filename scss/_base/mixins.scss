@@ -1,0 +1,118 @@
+$breakpoints: (
+        "xs": 480px,
+        "sm": 576px,
+        "md": 768px,
+        "lg": 1024px,
+        "xl": 1200px,
+        "xxl": 1500px
+);
+
+@mixin media($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width)
+  }
+
+  @if $type == max {
+    $width: $width - 1px
+  }
+
+  @media only screen and (#{$type}-width: $width) {
+    @content
+  }
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// +truncateText()
+@mixin truncateText($overflow: ellipsis) {
+  overflow: hidden;
+  white-space: nowrap;
+  // clip, ellipsis, or a string
+  text-overflow: $overflow;
+}
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+//@include bg_img_jpg("../img/bg/", "taxi_bg", center, cover, #585959)
+@mixin bg_img_jpg($img, $name, $bg-pos, $bg-size, $bg-color: transparent) {
+  @media screen and (max-width: 767px) {
+    background-image: url("#{$img}sm/#{$name}.jpg");
+    background-image: url("#{$img}sm/#{$name}.webp");
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    background-image: url("#{$img}md/#{$name}.jpg");
+    background-image: url("#{$img}md/#{$name}.webp");
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    background-image: url("#{$img}lg/#{$name}.jpg");
+    background-image: url("#{$img}lg/#{$name}.webp");
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1599px) {
+    background-image: url("#{$img}xl/#{$name}.jpg");
+    background-image: url("#{$img}xl/#{$name}.webp");
+  }
+  @media screen and (min-width: 1600px) {
+    background-image: url("#{$img}xxl/#{$name}.jpg");
+    background-image: url("#{$img}xxl/#{$name}.webp");
+  }
+  //iPhone 5 & 5S, 6, 7, & 8 & Plus in portrait
+  @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) {
+    background-image: url("#{$img}sm/#{$name}_@2x.jpg");
+  }
+  //iPhone 5 & 5S, 6, 7, & 8 & Plus in landscape
+  @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: landscape) {
+    background-image: url("#{$img}md/#{$name}_@2x.jpg");
+  }
+  //iPhone X in portrait
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+    background-image: url("#{$img}md/#{$name}_@2x.jpg");
+  }
+  //iPhone X in landscape
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+    background-image: url("#{$img}lg/#{$name}_@2x.jpg");
+  }
+  // MAC OS
+  @media screen and (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 2) {
+    background-image: url("#{$img}xl/#{$name}.jpg");
+  }
+  //MAC OS RATIO X2
+  @media screen and (min-width: 1400px) and (-webkit-min-device-pixel-ratio: 2) {
+    background-image: url("#{$img}xxl/#{$name}_@2x.jpg");
+  }
+  background-position: $bg-pos;
+  background-size: $bg-size;
+  background-color: $bg-color;
+  background-repeat: no-repeat;
+}
+

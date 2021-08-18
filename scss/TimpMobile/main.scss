@@ -1,0 +1,57 @@
+//*********************************************
+//		Assets
+//*********************************************
+@import "_assets/colors";
+
+@import "../_base/functions";
+@import "../_base/mixins";
+@import "../_base/reset";
+@import "../_base/animation";
+@import "../_base/preloader";
+
+
+// Перенос переменных в CSS
+:root {
+  @each $name, $color in $colors {
+    @if type-of($color) == "map" {
+      @each $subname, $subcolor in $color {
+        --color-#{$name}-#{$subname}: #{$subcolor};
+      }
+    } @else {
+      --color-#{$name}: #{$color};
+    }
+  }
+
+  /*---------------------------FONTS*/
+
+  --ff-headline: 'Lora', sans-serif;
+  --ff: 'Jost', sans-serif;
+
+  --mainWidth: 100%;
+  --padding-side: 2.5vmax;
+
+  @media screen and (min-width: 64em) {
+    --padding-side: 3.125em;
+  }
+  @media screen and (min-width: 75em) {
+    --mainWidth: 72.5em;
+    --padding-side: 0;
+  }
+}
+
+@import "_assets/mixin";
+@import "_assets/headlings";
+
+//*********************************************
+//		Blocks
+//*********************************************
+
+.--text-align-center {
+  text-align: center;
+}
+
+.--priF {
+  color: color(priF, null, false);
+}
+
+//@import "parts/container";
