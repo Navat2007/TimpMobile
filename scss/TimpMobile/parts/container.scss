@@ -1,11 +1,11 @@
-.o-main {
+.o-container {
   height: 100vh;
   @extend .m-login-bg;
 
   @include media(sm) {
     padding: 9vmin 1em;
 
-    .o-main__wrap {
+    .o-container__wrap {
       max-width: 30em;
       margin: auto;
     }
@@ -22,19 +22,9 @@
     flex-direction: column;
   }
 
-  &__top {
-    flex: none;
-
-    padding: 1.25em .75em .625em;
-    border-bottom: 1px solid color(g200, null, false);
-  }
-
-  &__center {
+  &__section {
     flex: auto;
-    overflow-y: auto;
-
-    padding: .625em .375em;
-    background: linear-gradient(180deg, color(g100, null, false) 0%, color(g200, null, false) 100%);
+    overflow: hidden;
   }
 
   &__bottom {
@@ -43,5 +33,25 @@
 
     padding: .625em .75em;
     background-color: color(g400, null, false);
+  }
+}
+
+.o-section {
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    flex: none;
+
+    padding: 1.25em .75em .625em;
+    border-bottom: 1px solid color(g200, null, false);
+  }
+
+  &__content {
+    flex: auto;
+    overflow-y: auto;
+
+    padding: .625em .375em 5em;
+    background: linear-gradient(180deg, color(g100, null, false) 0%, color(g200, null, false) 100%);
   }
 }

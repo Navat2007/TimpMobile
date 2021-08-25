@@ -1,3 +1,4 @@
+// верхнее раскрывающее меню
 .m-context-menu {
   position: relative;
   z-index: 1;
@@ -5,6 +6,7 @@
   &:not(.--open) .m-context-menu__wrap {
     transform: translateY(-0.25em);
     opacity: 0;
+    pointer-events: none;
   }
 
   &__icon {
@@ -57,7 +59,6 @@
   }
 
   &__list {
-    margin: 1em 0;
     padding: .875em 1.5em;
     width: max-content;
   }
@@ -67,4 +68,63 @@
     padding: 0.125em 0.25em;
     margin-bottom: 0.25em;
   }
+}
+
+
+// кнопка + внизу справа
+.m-add-btn-menu {
+  position: absolute;
+  bottom: 5.375em;
+  right: 1.25em;
+
+  &:not(.--open) .m-add-btn-menu__wrap {
+    transform: translateX(0.25em);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.--open .m-add-btn-menu__icon:before {
+    transform: rotate(-135deg);
+  }
+
+  &__icon {
+    display: inline-flex;
+    @include box(3em);
+    background-color: color(priF, null, false);
+    border-radius: 50%;
+    @extend %icon-active;
+
+    // Иконка
+    &:before {
+      content: '';
+      margin: auto;
+      @include box(70%);
+      @include icon(add);
+      background-color: color(white, null, false);
+
+      transform: rotate(0);
+      transition: transform .25s ease-out;
+    }
+  }
+
+  &__wrap {
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    margin-right: 1em;
+    transition: 0.25s ease-in-out;
+    transition-property: transform, opacity;
+    background-color: rgba(color(black, null, true), .15);
+  }
+
+  &__list {
+    padding: .375em .875em;
+    width: max-content;
+  }
+
+  &__item {
+    list-style: none;
+    margin-bottom: 0.5em;
+  }
+
 }
