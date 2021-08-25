@@ -1,0 +1,48 @@
+%icon-active {
+  cursor: pointer;
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+%img-box {
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+%clear-both {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// -------------- FONTS
+
+%h2 {
+  font-family: var(--ff-headline);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+%h3 {
+  font-family: var(--ff-headline);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+%xs-font {
+  font-size: .75rem;
+}
+
+%md-font {
+  font-size: 1.125rem;
+}

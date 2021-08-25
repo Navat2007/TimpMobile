@@ -79,7 +79,7 @@
   transition: 0.2s ease-out;
 
   @include placeholder {
-    color: color(g400, null, false);
+    color: color(g500, null, false);
   }
 
   &:disabled {
@@ -94,7 +94,9 @@
   font-weight: 500;
   transition: 0.2s ease-out;
 
-  & .required { color: color(error, null, false); }
+  & .required {
+    color: color(error, null, false);
+  }
 }
 
 @mixin info {
@@ -251,7 +253,6 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
-
 @mixin st-card($hover: true) {
   background-color: color(white, null, false);
   box-shadow: 0 0 1px rgba(color(g700, null, true), 0.26),
@@ -264,4 +265,24 @@
       2px 4px 15px rgba(color(g700, null, true), 0.26);
     }
   }
+}
+
+
+// ---------- ICONS
+
+@mixin icon($name, $icon-class: false) {
+  @if ($icon-class) {
+    #{"&.--icon-" + $name} {
+      mask: url(#{"../img/icons.svg#icons_" + $name}) no-repeat;
+    }
+  } @else {
+    mask: url(#{"../img/icons.svg#icons_" + $name}) no-repeat;
+  }
+}
+
+@mixin icon-set($bgColor, $size, $cursor: auto) {
+  display: inline-block;
+  @include box($size);
+  background-color: color($bgColor, null, false);
+  cursor: $cursor;
 }

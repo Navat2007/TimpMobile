@@ -1,0 +1,87 @@
+// Карта с проектами
+.m-panel-card {
+  &__wrap {
+    @include st-card();
+    border-radius: 4px;
+    padding: .625em;
+  }
+}
+
+.a-title-block {
+  @extend %clear-both;
+
+  &__img {
+    @extend %img-box;
+
+    float: left;
+    margin-right: .25em;
+    @include box(1.75em);
+    border-radius: 4px;
+  }
+
+  &__title {
+    @extend %md-font;
+  }
+}
+
+.a-xs-font {
+  @extend %xs-font;
+  color: color(g500, null, false);
+  text-align: center;
+}
+
+.a-expiration {
+  display: inline-flex;
+  align-items: center;
+  padding: .125em .375em;
+  border-radius: 2.5em;
+  background-color: rgba(color(success, null, true), .26);
+
+  .a-icon {
+    @include box(1em);
+    margin-right: .375em;
+    background-color: color(dark, null, false);
+  }
+
+  &__date {
+    @extend %xs-font;
+  }
+}
+
+.a-participants {
+
+  &__author {
+
+  }
+
+  &__assigned {
+
+  }
+
+  &__count {
+
+  }
+}
+
+.a-notif-counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  @extend %xs-font;
+  text-align: center;
+  color: color(g100, null, false);
+
+  @include box(1.75em);
+  background-color: color(priF, null, false);
+  border-radius: 50%;
+}
+
+.m-task-bar {
+}
+
+.a-task-item {
+}
+
+.a-progress {
+}

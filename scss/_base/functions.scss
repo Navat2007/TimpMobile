@@ -27,14 +27,6 @@
   }
 }
 
-@function dims-svg-em($width-svg, $width-icon, $icon-size) {
-  @return $width-svg * $icon-size / $width-icon / 16 * 1em
-}
-
-@function dims-svg-rem($width-svg, $width-icon, $icon-size) {
-  @return $width-svg * $icon-size / $width-icon / 16 * 1rem
-}
-
 // перевод пикселе в em/rem
 @function units-px-em($px) {
   @return $px / 16 * 1em

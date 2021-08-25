@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="194 -23.9 24 24" enable-background="new 194 -23.9 24 24" xml:space="preserve">
-<g id="Layer_1">
-	<g>
-		<path d="M196-17.8c1,0.8,1.8,1.5,2.7,2.2c2.2,1.8,4.5,3.7,6.7,5.5c0.5,0.4,0.7,0.4,1.2,0c3-2.4,6-4.9,9-7.3
-			c0.1-0.1,0.2-0.2,0.4-0.3c0,0.2,0,0.3,0,0.4c0,3.8,0,7.7,0,11.5c0,0.8-0.2,1-1,1c-6,0-12,0-18,0c-0.8,0-1-0.2-1-1
-			c0-3.9,0-7.7,0-11.6C196-17.4,196-17.5,196-17.8z"/>
-		<path d="M206-11.4c-3.1-2.5-6.1-5-9.2-7.6c6.2,0,12.4,0,18.6,0C212.2-16.4,209.1-13.9,206-11.4z"/>
-	</g>
-</g>
-<g id="Layer_2">
-</g>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="165 -23.9 24 24" enable-background="new 165 -23.9 24 24" xml:space="preserve">
+<path d="M185-19.9h-16c-1.1,0-2,0.9-2,2l0,12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2v-12C187-19,186.1-19.9,185-19.9z M185-15.9l-8,5
+	l-8-5v-2l8,5l8-5V-15.9z"/>
 </svg>

@@ -1,0 +1,30 @@
+.m-bottom-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.a-bottom-menu-item {
+  color: color(g500, null, false);
+
+  &:hover,
+  &.--active {
+    color: color(priF, null, false);
+
+    .a-bottom-menu-item__icon {
+      background-color: color(priF, null, false);
+    }
+  }
+
+
+  &__icon {
+    @extend .a-icon;
+    @include box(1.75rem);
+  }
+
+  &__name {
+    @extend %xs-font;
+    line-height: 100%;
+  }
+}

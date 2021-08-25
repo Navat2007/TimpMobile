@@ -23,13 +23,12 @@
     background-blend-mode: multiply;
     opacity: .54;
   }
-
 }
 
 .m-login-form {
 
   &__title {
-    @extend .a-h2;
+    @extend %h2;
     margin-bottom: 1.875rem;
     text-align: center;
   }
@@ -73,7 +72,7 @@
   }
 }
 
-.m-link-btn {
+.a-link-btn {
   @extend .a-btn;
   @include btnText(priF);
   text-transform: unset;
@@ -82,7 +81,7 @@
   vertical-align: unset;
 }
 
-.m-social-icon-link {
+.a-social-icon-link {
   display: inline-block;
   margin-right: .5em;
   @include box(1.875em);

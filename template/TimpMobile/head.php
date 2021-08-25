@@ -6,7 +6,7 @@ $version = rand();
 $versionJs = ".js?" . $version; // Для сжатия JS файлов
 $src = 'template/TimpMobile/';
 
-$site_url = "https://timp.ru"; // url-сайта
+$site_url = "https://mytimp.com"; // url-сайта
 
 // OPEN GRAPH, JSON-LD
 $open_graph = array(

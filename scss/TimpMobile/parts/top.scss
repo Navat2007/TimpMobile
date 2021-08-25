@@ -1,0 +1,20 @@
+.m-top-panel {
+}
+
+.m-top-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25em;
+
+  .a-main-title {
+    flex: none;
+    margin-right: auto;
+
+    @extend %h2;
+  }
+
+  .m-context-menu {
+    margin-left: .875rem;
+    margin-right: calc(1.25rem - .75rem);
+  }
+}

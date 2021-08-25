@@ -3,150 +3,100 @@ include $_SERVER['DOCUMENT_ROOT'] . 'template/TimpMobile/head.php';
 include $_SERVER['DOCUMENT_ROOT'] . 'template/TimpMobile/header.php';
 ?>
 
-<!--REGISTRATION-->
-<!--<div class="a-popup m-login-bg">
-    <div class="a-popup__card">
-        <div class="m-login-form">
-            <div class="m-login-form__section">
-                <p class="m-login-form__title">Регистрация</p>
-                <div class="a-field">
-                    <div class="a-field__inner">
-                        <input class="a-field__input"
-                               name="email"
-                               type="email"
-                               autocomplete="email"
-                               placeholder="Введите email">
-                        <i class="a-field__icon"></i>
-                        <span class="a-field__info"></span>
+<div class="o-main">
+    <div class="o-main__wrap">
+        <div class="o-main__top">
+            <div class="m-top-panel">
+                <div class="m-top-title">
+                    <p class="a-main-title">Проекты</p>
+                    <div class="m-context-menu">
+                        <i class="m-context-menu__icon" title="Дополнительно" id="contextMenuBtn"></i>
+                        <div class="m-context-menu__wrap">
+                            <ul class="m-context-menu__list">
+                                <li class="m-context-menu__item">пункт 1</li>
+                                <li class="m-context-menu__item">пункт 2</li>
+                                <li class="m-context-menu__item">пункт 3</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="a-field">
-                    <div class="a-field__inner">
-                        <input class="a-field__input"
-                               name="password"
-                               type="password"
-                               autocomplete="new-password"
-                               placeholder="Придумайте пароль">
-                        <i class="a-field__icon"></i>
-                        <span class="a-field__info"></span>
-                    </div>
+                <div class="a-search-filed">
+                    <input type="search" class="a-search-filed__input" placeholder="Название, проект, ответственный">
                 </div>
-                <div class="a-field">
-                    <div class="a-field__inner">
-                        <input class="a-field__input"
-                               name="password"
-                               type="password"
-                               autocomplete="new-password"
-                               placeholder="Повторите пароль">
-                        <i class="a-field__icon"></i>
-                        <span class="a-field__info"></span>
-                    </div>
-                </div>
-                <button class="m-login-form__btn" type="button">Регистрация</button>
-            </div>
-            <div class="m-login-form__social">
-                <p class="m-login-form__label">Регистрация с помощью:</p>
-                <a href="" class="m-social-icon-link --facebook"></a>
-                <a href="" class="m-social-icon-link --vk"></a>
-                <a href="" class="m-social-icon-link --telegram"></a>
-                <a href="" class="m-social-icon-link --viber"></a>
-                <a href="" class="m-social-icon-link --whatsapp"></a>
-            </div>
-            <div class="m-login-form__bottom">
-                <span>Уже есть аккаунт?</span>
-                <a class="m-link-btn" href="">Войти</a>
             </div>
         </div>
-    </div>
-</div>-->
-
-
-<!--LOGIN-->
-<!--<div class="a-popup m-login-bg">
-    <div class="a-popup__card">
-        <div class="m-login-form">
-            <div class="m-login-form__section">
-                <p class="m-login-form__title">Вход</p>
-                <div class="a-field">
-                    <div class="a-field__inner">
-                        <input class="a-field__input"
-                               name="email"
-                               type="email"
-                               autocomplete="email"
-                               placeholder="Введите email">
-                        <i class="a-field__icon"></i>
-                        <span class="a-field__info"></span>
+        <div class="o-main__center">
+            <div class="m-panel-card">
+                <div class="m-panel-card__wrap">
+                    <div class="a-title-block">
+                        <div class="a-title-block__img"><img src="template/TimpMobile/img/no-img.png"
+                                                             alt="Logo project"></div>
+                        <p class="a-title-block__title">Новый проект № 1</p>
                     </div>
-                </div>
-                <div class="a-field">
-                    <div class="a-field__inner">
-                        <input class="a-field__input"
-                               name="password"
-                               type="password"
-                               autocomplete="password"
-                               placeholder="Введите пароль">
-                        <i class="a-field__icon"></i>
-                        <i class="a-field__eye-icon"></i>
-                        <span class="a-field__info"></span>
+                    <span class="a-xs-font">Только что</span>
+                    <p class="a-expiration">
+                        <i class="a-icon --icon-update"></i>
+                        <span class="a-expiration__date">12.05.22</span>
+                    </p>
+                    <div class="a-participants">
+                        <div class="a-participants__author"><img src="" alt=""></div>
+                        <i class="a-icon --icon-arrow-right-sm"></i>
+                        <div class="a-participants__assigned"><img src="" alt=""></div>
+                        <div class="a-participants__count">12</div>
                     </div>
+                    <div class="a-notif-counter">12</div>
+                    <div class="m-task-bar">
+                        <div class="a-task-item">Новые - 15</div>
+                        <div class="a-task-item">В работе - 3</div>
+                        <div class="a-task-item">Выполнено - 4</div>
+                    </div>
+                    <div class="a-progress"><p>31%</p></div>
                 </div>
-                <button class="m-login-form__btn" type="button">Войти</button>
             </div>
-            <div class="m-login-form__social">
-                <p class="m-login-form__label">Регистрация с помощью:</p>
-                <a href="" class="m-social-icon-link --facebook"></a>
-                <a href="" class="m-social-icon-link --vk"></a>
-                <a href="" class="m-social-icon-link --telegram"></a>
-                <a href="" class="m-social-icon-link --viber"></a>
-                <a href="" class="m-social-icon-link --whatsapp"></a>
-            </div>
-            <div class="m-login-form__bottom">
-                <a href="">Забыли пароль?</a>
-                <a class="m-link-btn" href="">Регистрация</a>
+            <div class="m-add-btn-menu">
+                <i class="m-add-btn-menu__icon"></i>
+                <div class="m-add-btn-menu__wrap">
+                    <ul>
+                        <li>Пункт 1</li>
+                        <li>Пункт 2</li>
+                        <li>Пункт 3</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</div>-->
-
-
-<!--Forgot password-->
-<div class="a-popup m-login-bg">
-    <div class="a-popup__card">
-        <div class="m-login-form">
-            <div class="m-login-form__section">
-                <p class="m-login-form__title">Восстановление пароля</p>
-                <div class="a-field">
-                    <div class="a-field__inner">
-                        <input class="a-field__input"
-                               name="email"
-                               type="email"
-                               autocomplete="email"
-                               placeholder="Введите email">
-                        <i class="a-field__icon"></i>
-                        <span class="a-field__info"></span>
-                    </div>
+        <div class="o-main__bottom">
+            <div class="m-bottom-menu">
+                <div class="a-bottom-menu-item">
+                    <i class="a-bottom-menu-item__icon --icon-bubble-chart"></i>
+                    <p class="a-bottom-menu-item__name">Чаты</p>
                 </div>
-                <button class="m-login-form__btn" type="button">Отправить</button>
-            </div>
-            <div class="m-login-form__bottom">
-                <a class="m-link-btn" href="">Вход</a>
-                <a class="m-link-btn" href="">Регистрация</a>
+                <div class="a-bottom-menu-item">
+                    <i class="a-bottom-menu-item__icon --icon-dashboard"></i>
+                    <p class="a-bottom-menu-item__name">Проекты</p>
+                </div>
+                <div class="a-bottom-menu-item">
+                    <i class="a-bottom-menu-item__icon --icon-check-circle"></i>
+                    <p class="a-bottom-menu-item__name">Задачи</p>
+                </div>
+                <div class="a-bottom-menu-item">
+                    <i class="a-bottom-menu-item__icon --icon-more-horiz"></i>
+                    <p class="a-bottom-menu-item__name">Еще</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<script>
+    let contextMenuBtn = document.getElementById('contextMenuBtn');
+    contextMenuBtn.onclick = () => {
+        document.querySelector('.m-context-menu').classList.toggle('--open');
+    }
+</script>
 
-<!--NOTIFIC-->
-<div class="a-notific">
-    <div class="a-notific__card --success">
-        <div class="a-notific__icon"><p>✓</p></div>
-        <p class="a-notific__title">Успех</p>
-        <p class="a-notific__text">Письмо успешно отправлено.</p>
-        <div class="a-notific__controls"></div>
-    </div>
-</div>
-
+<?php
+//include $_SERVER['DOCUMENT_ROOT'] . 'template/TimpMobile/parts/login.php';
+?>
 
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . 'template/TimpMobile/footer.php';

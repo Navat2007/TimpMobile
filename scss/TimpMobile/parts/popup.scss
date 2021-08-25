@@ -1,5 +1,5 @@
 // УНИВЕРСАЛЬНОЕ ПОПАП
-.a-popup {
+.m-popup {
   @include backCard();
   z-index: 999;
   overflow-y: auto;
@@ -113,7 +113,7 @@
   &__title {
     align-self: center;
     margin: .875rem 1.25rem;
-    @extend .a-h3;
+    @extend %h3;
 
     &:last-of-type {
       grid-row: span 3;
