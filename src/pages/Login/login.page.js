@@ -1,19 +1,5 @@
 import React, { Component } from "react";
-import Form from "react-validation/build/form";
-import Input from "react-validation/build/input";
-import CheckButton from "react-validation/build/button";
-
 import AuthService from "../../services/auth.service";
-
-const required = value => {
-    if (!value) {
-        return (
-            <div className="alert alert-danger" role="alert">
-                This field is required!
-            </div>
-        );
-    }
-};
 
 export default class Login extends Component {
 
@@ -41,6 +27,28 @@ export default class Login extends Component {
         this.setState({
             password: e.target.value
         });
+    }
+
+    doLogin(){
+
+        console.log("do Login");
+        console.log(this.state.username);
+        console.log(this.state.password);
+
+    }
+
+    doForgotPassword(){
+
+        this.props.history.push("/forgot");
+        window.location.reload();
+
+    }
+
+    doRegister() {
+
+        this.props.history.push("/register");
+        window.location.reload();
+
     }
 
     handleLogin(e) {
@@ -94,7 +102,8 @@ export default class Login extends Component {
                                            name="email"
                                            type="email"
                                            autoComplete="email"
-                                           placeholder="Введите email">
+                                           placeholder="Введите email"
+                                           onChange={this.onChangeUsername}>
                                     </input>
                                     <i className="a-field__icon"/>
                                     <span className="a-field__info"/>
@@ -106,32 +115,32 @@ export default class Login extends Component {
                                            name="password"
                                            type="password"
                                            autoComplete="password"
-                                           placeholder="Введите пароль">
+                                           placeholder="Введите пароль"
+                                           onChange={this.onChangePassword}>
                                     </input>
                                     <i className="a-field__icon"/>
                                     <i className="a-field__eye-icon"/>
                                     <span className="a-field__info"/>
                                 </div>
                             </div>
-                            <button className="m-login-form__btn" type="button">Войти</button>
+                            <button onClick={() => this.doLogin()} className="m-login-form__btn" type="button">Войти</button>
                         </div>
                         <div className="m-login-form__social">
-                            <p className="m-login-form__label">Регистрация с помощью:</p>
-                            <a href="" className="m-social-icon-link --facebook"></a>
-                            <a href="" className="m-social-icon-link --vk"></a>
-                            <a href="" className="m-social-icon-link --telegram"></a>
-                            <a href="" className="m-social-icon-link --viber"></a>
-                            <a href="" className="m-social-icon-link --whatsapp"></a>
+                            <p className="m-login-form__label">Вход с помощью:</p>
+                            <button className="m-social-icon-link --facebook"></button>
+                            <button className="m-social-icon-link --vk"></button>
+                            <button className="m-social-icon-link --telegram"></button>
+                            <pbutton className="m-social-icon-link --viber"></pbutton>
+                            <button className="m-social-icon-link --whatsapp"></button>
                         </div>
                         <div className="m-login-form__bottom">
-                            <a href="">Забыли пароль?</a>
-                            <a className="m-link-btn" href="">Регистрация</a>
+                            <button onClick={() => this.doForgotPassword()}>Забыли пароль?</button>
+                            <button className="m-link-btn" onClick={() => this.doRegister()}>Регистрация</button>
                         </div>
                     </div>
                 </div>
             </div>
         );
-
 
     }
 }
