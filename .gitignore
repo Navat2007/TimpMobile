@@ -28,6 +28,3 @@ yarn-error.log*
 # Gulp
 package.json
 package-lock.json
-.babelrc
-gulpfile.js
-template.php

@@ -2,16 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="936d5a54-a5ac-4a38-b709-3fa7baa5de12" name="Default Changelist" comment="main page">
-      <change afterPath="$PROJECT_DIR$/template/TimpMobile/img/person.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/_assets/_extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/TimpMobile/_assets/_extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/_assets/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/TimpMobile/_assets/_icons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/TimpMobile/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/TimpMobile/parts/card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/context-menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/TimpMobile/parts/context-menu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/TimpMobile/parts/container.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/TimpMobile/css/styles.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/TimpMobile/css/styles.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/TimpMobile/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/TimpMobile/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/config/tasks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/tasks/img.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/tasks/mail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/tasks/sass.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/tasks/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/tasks/serve.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/tasks/watch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/_assets/_colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/_assets/_extends.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/_assets/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/_assets/_mixin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/bottom.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/button.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/container.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/context-menu.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/field.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/login.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/popup.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/TimpMobile/parts/top.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_base/animation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_base/functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_base/mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_base/preloader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_base/reset.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_add.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_arrow-dd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_arrow-left-sm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_arrow-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_arrow-right-sm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_arrow-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_attach-horiz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_attach.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_bubble-chart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_calendar-day.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_calendar-range.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_check-circle-outline.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_check-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_close-circle-outline.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_close.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_dashboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_email-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_email.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_error-outline.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_error.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_facebook.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_fb-fill.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_fiber-new.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_insta-fill.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_insta.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_location.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_more-horiz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_ok.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_person-add.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_person.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_phone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_play-arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_radio-button-unchecked.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_schedule.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_skype.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_tiktok.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_tme.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_trash.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_tw-fill.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_twitter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_update.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_viber.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_vk-fill.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_vk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_whatsapp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/icons_youtube.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-img/icon/stack/icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/TimpMobile/css/styles.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/TimpMobile/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/TimpMobile/head.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/TimpMobile/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/TimpMobile/img/icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/TimpMobile/img/img-bg_login.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/TimpMobile/img/no-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/TimpMobile/img/person.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/TimpMobile/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/TimpMobile/parts/login.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +109,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="1v47GvGks9NS0QEvjbyVhrCCZ5n" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -158,7 +233,9 @@
       <workItem from="1629460633375" duration="594000" />
       <workItem from="1629804786199" duration="10811000" />
       <workItem from="1629871795901" duration="8829000" />
-      <workItem from="1629886281687" duration="8812000" />
+      <workItem from="1629886281687" duration="8849000" />
+      <workItem from="1629959085488" duration="1568000" />
+      <workItem from="1629965703322" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="qq">
       <created>1625828556548</created>
@@ -223,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629885459244</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="main page">
+      <created>1629895187953</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1629895187953</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
