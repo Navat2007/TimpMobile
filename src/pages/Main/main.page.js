@@ -1,38 +1,39 @@
-import React, {Component} from 'react';
-import io from "socket.io-client";
+import React from 'react';
+
 import AuthService from "../../services/auth.service";
+import {useHistory} from "react-router";
 
-export default class Main extends Component {
+const Main = () => {
 
-    constructor(props) {
-        super(props);
+    const router = useHistory();
+    const user = AuthService.getCurrentUser();
 
-        this.state = {
-            currentUser: AuthService.getCurrentUser()
-        };
+    React.useEffect(() => {
+
+
+
+    }, []);
+
+    if (user == null) {
+        if(window.global.debug)
+            console.log("No user. Load login");
+
+        router.push('/login');
+    }
+    else
+    {
+        if(window.global.debug)
+            console.log("User: ", user);
+
+        router.push('/projects');
     }
 
-    componentDidMount() {
-
-        const socket = io.connect("ws://" + window.baseUrl);
-
-        socket.on("connect", () => {
-            console.log("Successfully connected!");
-
-            socket.emit('login', {});
-        });
-
-    }
-
-    render() {
-
-        const { currentUser } = this.state;
-
-        return (
-            <div className="container">
-                Main page
-            </div>
-        );
-    }
+    return (
+        <div>
+            Main
+        </div>
+    );
 
 }
+
+export default Main;

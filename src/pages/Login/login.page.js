@@ -1,149 +1,93 @@
-import React, { Component } from "react";
+import React from "react";
 import AuthService from "../../services/auth.service";
+import {Link} from "react-router-dom";
+import {UserContext} from "../../context";
 
-export default class Login extends Component {
+const Login = () => {
 
-    constructor(props) {
-        super(props);
-        this.handleLogin = this.handleLogin.bind(this);
-        this.onChangeUsername = this.onChangeUsername.bind(this);
-        this.onChangePassword = this.onChangePassword.bind(this);
+    const {setUser} = React.useContext(UserContext);
+    const [username, setUsername] = React.useState('');
+    const [password, setPassword] = React.useState('');
 
-        this.state = {
-            username: "",
-            password: "",
-            loading: false,
-            message: ""
-        };
-    }
+    const doLogin = async () => {
 
-    onChangeUsername(e) {
-        this.setState({
-            username: e.target.value
-        });
-    }
-
-    onChangePassword(e) {
-        this.setState({
-            password: e.target.value
-        });
-    }
-
-    doLogin(){
-
-        console.log("do Login");
-        console.log(this.state.username);
-        console.log(this.state.password);
-
-    }
-
-    doForgotPassword(){
-
-        this.props.history.push("/forgot");
-        window.location.reload();
-
-    }
-
-    doRegister() {
-
-        this.props.history.push("/register");
-        window.location.reload();
-
-    }
-
-    handleLogin(e) {
-        e.preventDefault();
-
-        this.setState({
-            message: "",
-            loading: true
-        });
-
-        this.form.validateAll();
-
-        if (this.checkBtn.context._errors.length === 0) {
-            AuthService.login(this.state.username, this.state.password).then(
-                () => {
-                    this.props.history.push("/");
-                    window.location.reload();
-                },
-                error => {
-                    const resMessage =
-                        (error.response &&
-                            error.response.data &&
-                            error.response.data.message) ||
-                        error.message ||
-                        error.toString();
-
-                    this.setState({
-                        loading: false,
-                        message: resMessage
-                    });
-                }
-            );
-        } else {
-            this.setState({
-                loading: false
-            });
+        if (window.global.debug) {
+            console.log("do Login");
+            console.log(username);
+            console.log(password);
         }
+
+        let result = await AuthService.login(username, password);
+
+        if (window.global.debug)
+            console.log("Login result: ", result);
+
+        if (result) {
+            setUser(true);
+        }
+
     }
 
-    render() {
-
-        return (
-            <div className="a-popup m-login-bg">
-                <div className="a-popup__card">
-                    <div className="m-login-form">
-                        <div className="m-login-form__section">
-                            <p className="m-login-form__title">Вход</p>
-                            <div className="a-field">
-                                <div className="a-field__inner">
-                                    <input className="a-field__input"
-                                           name="email"
-                                           type="email"
-                                           autoComplete="email"
-                                           placeholder="Введите email"
-                                           onChange={this.onChangeUsername}>
-                                    </input>
-                                    <i className="a-field__icon"/>
-                                    <span className="a-field__info"/>
-                                </div>
+    return (
+        <div className="m-popup m-login-bg">
+            <div className="m-popup__card">
+                <div className="m-login-form">
+                    <div className="m-login-form__section">
+                        <p className="m-login-form__title">Вход</p>
+                        <div className="a-field">
+                            <div className="a-field__inner">
+                                <input className="a-field__input"
+                                       name="email"
+                                       type="email"
+                                       autoComplete="email"
+                                       placeholder="Введите логин"
+                                       onChange={event => setUsername(event.target.value)}>
+                                </input>
+                                <i className="a-field__icon"/>
+                                <span className="a-field__info"/>
                             </div>
-                            <div className="a-field">
-                                <div className="a-field__inner">
-                                    <input className="a-field__input"
-                                           name="password"
-                                           type="password"
-                                           autoComplete="password"
-                                           placeholder="Введите пароль"
-                                           onChange={this.onChangePassword}>
-                                    </input>
-                                    <i className="a-field__icon"/>
-                                    <i className="a-field__eye-icon"/>
-                                    <span className="a-field__info"/>
-                                </div>
+                        </div>
+                        <div className="a-field">
+                            <div className="a-field__inner">
+                                <input className="a-field__input"
+                                       name="password"
+                                       type="password"
+                                       autoComplete="password"
+                                       placeholder="Введите пароль"
+                                       onChange={event => setPassword(event.target.value)}>
+                                </input>
+                                <i className="a-field__icon"/>
+                                <i className="a-field__eye-icon"/>
+                                <span className="a-field__info"/>
                             </div>
-                            <button onClick={() => this.doLogin()} className="m-login-form__btn" type="button">Войти</button>
                         </div>
-                        <div className="m-login-form__social">
-                            <p className="m-login-form__label">Вход с помощью:</p>
-                            <button className="m-social-icon-link --facebook"></button>
-                            <button className="m-social-icon-link --vk"></button>
-                            <button className="m-social-icon-link --telegram"></button>
-                            <pbutton className="m-social-icon-link --viber"></pbutton>
-                            <button className="m-social-icon-link --whatsapp"></button>
-                        </div>
-                        <div className="m-login-form__bottom">
-                            <button onClick={() => this.doForgotPassword()}>Забыли пароль?</button>
-                            <button className="m-link-btn" onClick={() => this.doRegister()}>Регистрация</button>
-                        </div>
+                        <button
+                            onClick={() => doLogin()}
+                            className="m-login-form__btn"
+                            type="button"
+                        >
+                            Войти
+                        </button>
+                    </div>
+                    <div className="m-login-form__social --hide">
+                        <p className="m-login-form__label">Вход с помощью:</p>
+                        <button className="a-social-icon-link --facebook"></button>
+                        <button className="a-social-icon-link --vk"></button>
+                        <button className="a-social-icon-link --telegram"></button>
+                        <button className="a-social-icon-link --viber"></button>
+                        <button className="a-social-icon-link --whatsapp"></button>
+                    </div>
+                    <div className="m-login-form__bottom">
+                        <Link to="/forgot">Забыли пароль?</Link>
+                        <Link className="a-link-btn" to="/register">Регистрация</Link>
                     </div>
                 </div>
             </div>
-        );
+        </div>
+    );
+};
 
-    }
-}
+export default Login;
 
 /*
 return (

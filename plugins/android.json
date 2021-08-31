@@ -16,6 +16,9 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "ru.navat.timp"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "ru.navat.timp"
     }
   },
   "dependent_plugins": {}
