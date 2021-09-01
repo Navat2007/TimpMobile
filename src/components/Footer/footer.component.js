@@ -27,7 +27,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <div className="o-container__bottom">
+        <div className="o-section__bottom">
             <div className="m-bottom-menu">
                 <Link onClick={() => setRoute('projects')} to="/projects">
                     <div className={route === "projects" ? "a-bottom-menu-item --active": "a-bottom-menu-item"}>

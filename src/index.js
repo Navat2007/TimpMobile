@@ -13,6 +13,13 @@ const baseConfig = () => {
           register: true,
         },
         baseUrl: "62.113.118.96:9988",
+        timpApiUrl: 'https://h812195069.nichost.ru',
+        colors: {
+            error: 'F24E38',
+            success: '50B25F',
+            alert: 'F2C438',
+            info: '4363D4'
+        }
     }
 
     axios.defaults.baseURL = 'http://' + window.global.baseUrl + '/';

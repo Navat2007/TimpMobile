@@ -8,18 +8,7 @@ import {UserContext} from "./context";
 
 const App = () => {
 
-    const [user, setUser] = React.useState(false);
-
-    React.useEffect(() => {
-
-        const authUser = AuthService.getCurrentUser();
-
-        if(authUser)
-        {
-            setUser(authUser);
-        }
-
-    }, []);
+    const [user, setUser] = React.useState(!!AuthService.getCurrentUser());
 
     return (
         <UserContext.Provider value={{

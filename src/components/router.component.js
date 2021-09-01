@@ -8,8 +8,6 @@ import TasksPage from "../pages/Tasks/tasks.page";
 import ChatsPage from "../pages/Chats/chats.page";
 import ConfigPage from "../pages/Config/config.page";
 import ForgotPage from "../pages/Forgot/forgot.page";
-import Footer from "./Footer/footer.component";
-import Container from "./container.component";
 import {UserContext} from "../context";
 
 const RouterComponent = () => {
@@ -38,22 +36,19 @@ const RouterComponent = () => {
 
         user
             ?
-            <Container>
-                <Switch>
-                    {
-                        privateRoutes.map(route =>
-                            <Route
-                                path={route.path}
-                                component={route.component}
-                                exact={route.exact}
-                                key={route.path}
-                            />
-                        )
-                    }
-                    <Redirect to="/projects"/>
-                </Switch>
-                <Footer/>
-            </Container>
+            <Switch>
+                {
+                    privateRoutes.map(route =>
+                        <Route
+                            path={route.path}
+                            component={route.component}
+                            exact={route.exact}
+                            key={route.path}
+                        />
+                    )
+                }
+                <Redirect to="/projects"/>
+            </Switch>
             :
             <Switch>
                 {

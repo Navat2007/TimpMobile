@@ -9,7 +9,7 @@ export default class ProjectsService {
 
         const response = await axios({
             method: 'post',
-            url: 'https://mytimp.com/api/ThemeLoad/',
+            url: window.global.timpApiUrl + '/api/ThemeLoad/',
             data: form
         });
 

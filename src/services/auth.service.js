@@ -9,7 +9,7 @@ class AuthService {
 
         const response = await axios({
             method: 'post',
-            url: 'https://mytimp.com/api/Login/check_login.php',
+            url: window.global.timpApiUrl + '/api/Login/check_login.php',
             data: form
         });
 

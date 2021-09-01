@@ -1,8 +1,9 @@
 import React from 'react';
+import person from '../img/person.png';
 
 const ProjectComponent = (props) => {
 
-    console.log(props);
+    //console.log(props);
 
     const donePercent = Math.ceil((props.project.task_done * 100) / (props.project.task_need + props.project.task_work + props.project.task_done));
 
@@ -11,17 +12,17 @@ const ProjectComponent = (props) => {
             <div className="m-panel-card__wrap">
                 <div className="m-panel-card__card-section">
                     <div className="a-title-block">
-                        <div className="a-title-block__img"><img src="../img/no-img.png"
+                        <div className="a-title-block__img"><img src={person}
                                                                  alt="Logo project"/></div>
                         <p className="a-title-block__title">{props.project.title}</p>
                     </div>
                     <span className="a-xs-font">Только что</span>
                     <div className="a-participants">
-                        <div className="a-participants__author"><img src="../img/person.png"
+                        <div className="a-participants__author"><img src={person}
                                                                      alt=""/>
                         </div>
                         <i className="a-icon --icon-arrow-right-sm"/>
-                        <div className="a-participants__assigned"><img src="../img/person.png"
+                        <div className="a-participants__assigned"><img src={person}
                                                                        alt=""/>
                         </div>
                     </div>
