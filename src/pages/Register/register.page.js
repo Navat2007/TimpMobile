@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-import { isEmail } from "validator";
+import {isEmail} from "validator";
 
 import AuthService from "../../services/auth.service";
+import {Link} from "react-router-dom";
 
 const required = value => {
     if (!value) {
@@ -46,163 +47,112 @@ const vpassword = value => {
     }
 };
 
-export default class Register extends Component {
-    constructor(props) {
-        super(props);
-        this.handleRegister = this.handleRegister.bind(this);
-        this.onChangeUsername = this.onChangeUsername.bind(this);
-        this.onChangeEmail = this.onChangeEmail.bind(this);
-        this.onChangePassword = this.onChangePassword.bind(this);
+const RegisterPage = () => {
 
-        this.state = {
-            username: "",
-            email: "",
-            password: "",
-            successful: false,
-            message: ""
-        };
-    }
+    const [login, setLogin] = React.useState('');
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const [passwordConfirm, setPasswordConfirm] = React.useState('');
 
-    onChangeUsername(e) {
-        this.setState({
-            username: e.target.value
-        });
-    }
+    const register = () => {
 
-    onChangeEmail(e) {
-        this.setState({
-            email: e.target.value
-        });
-    }
+        if(window.global.debug)
+        {
 
-    onChangePassword(e) {
-        this.setState({
-            password: e.target.value
-        });
-    }
+            console.log("Регистрация: ");
+            console.log(login);
+            console.log(email);
+            console.log(password);
+            console.log(passwordConfirm);
 
-    handleRegister(e) {
-        e.preventDefault();
-
-        this.setState({
-            message: "",
-            successful: false
-        });
-
-        this.form.validateAll();
-
-        if (this.checkBtn.context._errors.length === 0) {
-            AuthService.register(
-                this.state.username,
-                this.state.email,
-                this.state.password
-            ).then(
-                response => {
-                    this.setState({
-                        message: response.data.message,
-                        successful: true
-                    });
-                },
-                error => {
-                    const resMessage =
-                        (error.response &&
-                            error.response.data &&
-                            error.response.data.message) ||
-                        error.message ||
-                        error.toString();
-
-                    this.setState({
-                        successful: false,
-                        message: resMessage
-                    });
-                }
-            );
         }
-    }
 
-    render() {
-        return (
-            <div className="col-md-12">
-                <div className="card card-container">
-                    <img
-                        src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                        alt="profile-img"
-                        className="profile-img-card"
-                    />
 
-                    <Form
-                        onSubmit={this.handleRegister}
-                        ref={c => {
-                            this.form = c;
-                        }}
-                    >
-                        {!this.state.successful && (
-                            <div>
-                                <div className="form-group">
-                                    <label htmlFor="username">Username</label>
-                                    <Input
-                                        type="text"
-                                        className="form-control"
-                                        name="username"
-                                        value={this.state.username}
-                                        onChange={this.onChangeUsername}
-                                        validations={[required, vusername]}
-                                    />
-                                </div>
 
-                                <div className="form-group">
-                                    <label htmlFor="email">Email</label>
-                                    <Input
-                                        type="text"
-                                        className="form-control"
-                                        name="email"
-                                        value={this.state.email}
-                                        onChange={this.onChangeEmail}
-                                        validations={[required, email]}
-                                    />
-                                </div>
+    };
 
-                                <div className="form-group">
-                                    <label htmlFor="password">Password</label>
-                                    <Input
-                                        type="password"
-                                        className="form-control"
-                                        name="password"
-                                        value={this.state.password}
-                                        onChange={this.onChangePassword}
-                                        validations={[required, vpassword]}
-                                    />
-                                </div>
-
-                                <div className="form-group">
-                                    <button className="btn btn-primary btn-block">Sign Up</button>
-                                </div>
+    return (
+        <div className="m-popup m-login-bg">
+            <div className="m-popup__card">
+                <div className="m-login-form">
+                    <div className="m-login-form__section">
+                        <p className="m-login-form__title">Регистрация</p>
+                        <div className="a-field">
+                            <div className="a-field__inner">
+                                <input className="a-field__input"
+                                       name="login"
+                                       type="login"
+                                       autoComplete="login"
+                                       placeholder="Введите логин"
+                                       onChange={event => setLogin(event.target.value)}
+                                />
+                                <i className="a-field__icon"/>
+                                <span className="a-field__info"/>
                             </div>
-                        )}
-
-                        {this.state.message && (
-                            <div className="form-group">
-                                <div
-                                    className={
-                                        this.state.successful
-                                            ? "alert alert-success"
-                                            : "alert alert-danger"
-                                    }
-                                    role="alert"
-                                >
-                                    {this.state.message}
-                                </div>
+                        </div>
+                        <div className="a-field">
+                            <div className="a-field__inner">
+                                <input className="a-field__input"
+                                       name="email"
+                                       type="email"
+                                       autoComplete="email"
+                                       placeholder="Введите email"
+                                       onChange={event => setEmail(event.target.value)}
+                                />
+                                <i className="a-field__icon"/>
+                                <span className="a-field__info"/>
                             </div>
-                        )}
-                        <CheckButton
-                            style={{ display: "none" }}
-                            ref={c => {
-                                this.checkBtn = c;
-                            }}
-                        />
-                    </Form>
+                        </div>
+                        <div className="a-field">
+                            <div className="a-field__inner">
+                                <input className="a-field__input"
+                                       name="password"
+                                       type="password"
+                                       autoComplete="new-password"
+                                       placeholder="Придумайте пароль"
+                                       onChange={event => setPassword(event.target.value)}
+                                />
+                                <i className="a-field__icon"/>
+                                <span className="a-field__info"/>
+                            </div>
+                        </div>
+                        <div className="a-field">
+                            <div className="a-field__inner">
+                                <input className="a-field__input"
+                                       name="password"
+                                       type="password"
+                                       autoComplete="new-password"
+                                       placeholder="Повторите пароль"
+                                       onChange={event => setPasswordConfirm(event.target.value)}
+                                />
+                                <i className="a-field__icon"/>
+                                <span className="a-field__info"/>
+                            </div>
+                        </div>
+                        <button
+                            className="m-login-form__btn"
+                            type="button"
+                            onClick={() => register()}
+                        >
+                            Регистрация
+                        </button>
+                    </div>
+                    <div className="m-login-form__social --hide">
+                        <p className="m-login-form__label">Регистрация с помощью:</p>
+                        <button className="a-social-icon-link --facebook"></button>
+                        <button className="a-social-icon-link --vk"></button>
+                        <button className="a-social-icon-link --telegram"></button>
+                        <button className="a-social-icon-link --viber"></button>
+                        <button className="a-social-icon-link --whatsapp"></button>
+                    </div>
+                    <div className="m-login-form__bottom">
+                        <span>Уже есть аккаунт?</span>
+                        <Link className="a-link-btn" to="/login">Войти</Link>
+                    </div>
                 </div>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
+
+export default RegisterPage;

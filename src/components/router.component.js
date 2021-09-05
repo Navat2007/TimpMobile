@@ -14,8 +14,9 @@ const RouterComponent = () => {
 
     const {user} = React.useContext(UserContext);
 
-    if(window.global.debug)
+    if(window.global.debug){
         console.log(user);
+    }
 
     const privateRoutes = [
         {path: '/', component: ProjectsPage, exact: true},

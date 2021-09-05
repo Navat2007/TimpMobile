@@ -8,51 +8,56 @@ const ProjectComponent = (props) => {
     const donePercent = Math.ceil((props.project.task_done * 100) / (props.project.task_need + props.project.task_work + props.project.task_done));
 
     return (
-        <div className="m-panel-card">
-            <div className="m-panel-card__wrap">
-                <div className="m-panel-card__card-section">
-                    <div className="a-title-block">
-                        <div className="a-title-block__img"><img src={person}
-                                                                 alt="Logo project"/></div>
-                        <p className="a-title-block__title">{props.project.title}</p>
-                    </div>
-                    <span className="a-xs-font">Только что</span>
-                    <div className="a-participants">
-                        <div className="a-participants__author"><img src={person}
-                                                                     alt=""/>
+        <div className="m-card">
+            <div className="m-card__wrap">
+                <div className="m-card__section">
+                    <div className="m-project-card">
+                        <div className="m-project-card__top">
+                            <div className="a-title-block">
+                                <div className="a-title-block__img"><img src={person}
+                                                                         alt="Logo project"/></div>
+                                <p className="a-title-block__title">{props.project.title}</p>
+                            </div>
+                            <span className="a-update-time">{props.project.date}</span>
                         </div>
-                        <i className="a-icon --icon-arrow-right-sm"/>
-                        <div className="a-participants__assigned"><img src={person}
-                                                                       alt=""/>
+                        <div className="m-project-card__center">
+                            <div className="m-avatar-group">
+                                <i className="a-icon --icon-person"/>
+                                <span className="m-avatar-group__number">{props.project.user_count}</span>
+                            </div>
+                            {
+                                props.project.message_count > 0
+                                    ? <div className="a-notif-counter"><p>{props.project.message_count}</p></div>
+                                    : ''
+                            }
                         </div>
-                    </div>
-                    <p className="a-expiration">
-                        <i className="a-icon --icon-update"/>
-                        <span className="a-expiration__date">12.05.22</span>
-                    </p>
-                    <div className="a-notif-counter">{props.project.message_count > 0 ? props.project.message_count : ''}</div>
-                    <div className="m-task-bar">
-                        <div className="a-task-item">Новые - {props.project.task_need}</div>
-                        <div className="a-task-item">В работе - {props.project.task_work}</div>
-                        <div className="a-task-item">Выполнено - {props.project.task_done}</div>
-                    </div>
-                    <div className="a-progress">
-                        <div className="a-progress__percentage" style={{width: donePercent + '%'}}/>
-                        <p>{donePercent}%</p>
+                        <div className="m-project-card__bottom">
+                            <div className="m-task-bar">
+                                <div className="a-task-item">Новые - {props.project.task_need}</div>
+                                <div className="a-task-item">В работе - {props.project.task_work}</div>
+                                <div className="a-task-item">Выполнено - {props.project.task_done}</div>
+                            </div>
+                            <div className="a-progress">
+                                <div className="a-progress__percentage" style={{width: donePercent + '%'}}/>
+                                <p>{donePercent}%</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="m-panel-card__edit-section">
-                    <div className="a-edit-panel-btn">
-                        <i className="a-icon --icon-more-horiz"/>
-                        <p>Ещё</p>
-                    </div>
-                    <div className="a-edit-panel-btn">
-                        <i className="a-icon --icon-person-add"/>
-                        <p>Добавить</p>
-                    </div>
-                    <div className="a-edit-panel-btn">
-                        <i className="a-icon --icon-trash"/>
-                        <p>Удалить</p>
+                <div className="m-card__section">
+                    <div className="m-card-edit-panel">
+                        <div className="a-edit-panel-btn">
+                            <i className="a-icon --icon-more-horiz"/>
+                            <p>Ещё</p>
+                        </div>
+                        <div className="a-edit-panel-btn">
+                            <i className="a-icon --icon-person-add"/>
+                            <p>Добавить</p>
+                        </div>
+                        <div className="a-edit-panel-btn">
+                            <i className="a-icon --icon-trash"/>
+                            <p>Удалить</p>
+                        </div>
                     </div>
                 </div>
             </div>

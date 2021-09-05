@@ -1,32 +1,46 @@
 import React from 'react';
-import ProjectsService from "../../services/projects.service";
-import AuthService from "../../services/auth.service";
+
 import ProjectComponent from "../../components/project.component";
 import Footer from "../../components/Footer/footer.component";
 import Container from "../../components/container.component";
+import {ProjectsContext} from "../../context";
+import Accordion from "../../components/accordion";
+import AuthService from "../../services/auth.service";
 
 const ProjectsPage = () => {
 
-    const [projectsLoading, setProjectsLoading] = React.useState(false);
+    const {projects} = React.useContext(ProjectsContext);
+
     const [plusBtnOpen, setPlusBtnOpen] = React.useState(false);
     const [topMenuOpen, setTopMenuOpen] = React.useState(false);
-    const [projects, setProjects] = React.useState([]);
 
-    React.useEffect(()=>{
+    const groupByKey = (list, key) => list.reduce((hash, obj) => ({
+        ...hash,
+        [obj[key]]: (hash[obj[key]] || []).concat(obj)
+    }), {});
 
-        const user = AuthService.getCurrentUser();
+    const getFiltered = projects => {
 
-        async function fetch(){
+        let array = [];
+        let result = [];
 
-            setProjectsLoading(true);
-            const data = await ProjectsService.getAll(user.ID);
-            setProjects(data);
-            setProjectsLoading(false);
+        array.push(Object.values(groupByKey(projects
+            .filter(project => project.autorID != AuthService.getCurrentUser().ID && project.archive == 0), 'autorID')));
+
+        for (let i = 0; i < array[0].length; i++) {
+
+            result.push({
+                autorID: array[0][i][0].autorID,
+                autor: array[0][i][0].autor,
+                title: array[0][i][0].team_title,
+                array: array[0][i]
+            })
+
         }
 
-        fetch();
+        return result;
 
-    }, []);
+    }
 
     return (
         <Container onClick={() => {
@@ -37,10 +51,11 @@ const ProjectsPage = () => {
                 <div className="m-top-panel">
                     <div className="m-top-title">
                         <p className="a-main-title">Проекты</p>
-                        <div className={topMenuOpen ? "m-context-menu --open --hide":"m-context-menu --hide"} onClick={(e) => {
-                            e.stopPropagation();
-                            setTopMenuOpen(!topMenuOpen);
-                        }}>
+                        <div className={topMenuOpen ? "m-context-menu --open --hide" : "m-context-menu --hide"}
+                             onClick={(e) => {
+                                 e.stopPropagation();
+                                 setTopMenuOpen(!topMenuOpen);
+                             }}>
                             <i className="m-context-menu__icon" title="Дополнительно"/>
                             <div className="m-context-menu__wrap">
                                 <ul className="m-context-menu__list">
@@ -58,13 +73,33 @@ const ProjectsPage = () => {
                 </div>
             </div>
             <div className="o-section__content">
-                {
-                    projects.map(project =>
-                        <ProjectComponent key={project.ID} project={project} />
-                    )
-                }
+                <Accordion title={"Мои проекты"} open={true}>
+                    {
+                        projects
+                            .filter(project => project.autorID == AuthService.getCurrentUser().ID && project.archive == 0)
+                            .map(project => <ProjectComponent key={project.ID} project={project}/>)
+                    }
+                </Accordion>
+                <Accordion title={"Участвую"}>
+                    {
+                        getFiltered(projects).map(group =>
+                            <Accordion key={group.autorID} title={`${group.title} (${group.autor.email})`}>
+                                {
+                                    group.array.map(project => <ProjectComponent key={project.ID} project={project}/>)
+                                }
+                            </Accordion>
+                        )
+                    }
+                </Accordion>
+                <Accordion title={"Архив"}>
+                    {
+                        projects
+                            .filter(project => project.autorID == AuthService.getCurrentUser().ID && project.archive == 1)
+                            .map(project => <ProjectComponent key={project.ID} project={project}/>)
+                    }
+                </Accordion>
             </div>
-            <div className={plusBtnOpen ? 'm-add-btn-menu --open':'m-add-btn-menu'} onClick={(e) => {
+            <div className={plusBtnOpen ? 'm-add-btn-menu --open' : 'm-add-btn-menu'} onClick={(e) => {
                 e.stopPropagation();
                 setPlusBtnOpen(!plusBtnOpen);
             }}>

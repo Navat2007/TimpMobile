@@ -1,4 +1,5 @@
 import axios from "axios";
+import memoize from 'lodash.memoize';
 
 export default class ProjectsService {
 

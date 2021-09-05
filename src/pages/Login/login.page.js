@@ -1,11 +1,13 @@
 import React from "react";
 import AuthService from "../../services/auth.service";
 import {Link} from "react-router-dom";
-import {UserContext} from "../../context";
+import {ProjectsContext, UserContext} from "../../context";
 
 const Login = () => {
 
     const {setUser} = React.useContext(UserContext);
+    const {setProjectsNeedLoad} = React.useContext(ProjectsContext);
+
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
 
@@ -23,6 +25,7 @@ const Login = () => {
             console.log("Login result: ", result);
 
         if (result) {
+            setProjectsNeedLoad(true);
             setUser(true);
         }
 

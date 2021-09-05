@@ -5,6 +5,7 @@ import AuthService from "./services/auth.service";
 
 import './css/styles.min.css';
 import {UserContext} from "./context";
+import SocketioComponent from "./components/socketio.component";
 
 const App = () => {
 
@@ -15,9 +16,11 @@ const App = () => {
             user,
             setUser
         }}>
-            <BrowserRouter>
-                <RouterComponent/>
-            </BrowserRouter>
+            <SocketioComponent>
+                <BrowserRouter>
+                    <RouterComponent/>
+                </BrowserRouter>
+            </SocketioComponent>
         </UserContext.Provider>
     );
 
