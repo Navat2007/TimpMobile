@@ -9,6 +9,7 @@ import ChatsPage from "../pages/Chats/chats.page";
 import ConfigPage from "../pages/Config/config.page";
 import ForgotPage from "../pages/Forgot/forgot.page";
 import {UserContext} from "../context";
+import ProjectPage from "../pages/Project/project.page";
 
 const RouterComponent = () => {
 
@@ -22,6 +23,7 @@ const RouterComponent = () => {
         {path: '/', component: ProjectsPage, exact: true},
         {path: '/error', component: Error404, exact: true},
         {path: '/projects', component: ProjectsPage, exact: true},
+        {path: '/project/:id', component: ProjectPage, exact: true},
         {path: '/tasks', component: TasksPage, exact: true},
         {path: '/chats', component: ChatsPage, exact: true},
         {path: '/config', component: ConfigPage, exact: true},

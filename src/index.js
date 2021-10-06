@@ -13,7 +13,7 @@ const baseConfig = () => {
           register: true,
         },
         baseUrl: "62.113.118.96:9988",
-        timpApiUrl: 'https://h812195069.nichost.ru',
+        timpApiUrl: 'https://mytimp.com',
         colors: {
             error: 'F24E38',
             success: '50B25F',

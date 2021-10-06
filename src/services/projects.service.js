@@ -20,4 +20,10 @@ export default class ProjectsService {
         return response.data.array;
 
     }
+
+    static async getByID() {
+
+        
+
+    }
 }

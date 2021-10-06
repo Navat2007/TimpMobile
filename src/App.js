@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import RouterComponent from "./components/router.component";
 import AuthService from "./services/auth.service";
 
@@ -17,9 +17,9 @@ const App = () => {
             setUser
         }}>
             <SocketioComponent>
-                <BrowserRouter>
+                <HashRouter>
                     <RouterComponent/>
-                </BrowserRouter>
+                </HashRouter>
             </SocketioComponent>
         </UserContext.Provider>
     );
